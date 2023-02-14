@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <!-- <link href="//code.jquery.com/ui/1.10.4/themes/start/jquery-ui.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes//jquery-ui.css"> -->
+</head>
+<style>
+    #mainContainer{
+        margin:0px auto;
+        width: fit-content;
+        border:2px solid blue;
+        border-radius: 10px;
+        margin-top:80px;
+        height:400px;
+    }
+    h2{
+        text-align: center;
+        color:rgb(136, 206, 7);
+    }
+    #btnProject, #btnTask{
+       background-color: rgb(7, 116, 160);
+     
+       color:white;
+       width: 150px;
+       height: 30px;
+       border: 1px solid  rgb(21, 241, 230);
+       border-radius: 6px;
+       float:right;
+       margin:5px;
+        cursor: pointer;
+       
+    }
+   
+    ol li{
+        border: 1px dashed rgb(21, 241, 230);
+        padding:2px;
+        margin:5px;
+        color:darkred;
+        cursor:move;
+       
+    }
+    ol li:hover{
+       background-color:rgb(136, 206, 7);
+       color:white;
+       cursor:grabbing;
+    }
+    #dialog-box{
+        display: none;
+    }
+    #taskDialog{
+        display: none;
+    }
+    .ui-icon-circle-close{
+        transform: scale(1);
+        cursor: pointer;
+       
+    }
+  
+</style>
+<body>
+    <div id="mainContainer">
+       
+        <button id="btnProject">Add Tab</button>
+        <h2>To Do List</h2>
+        <div id="container">
+            
+                <ul id="main">
+                    <li><a href="#morning">MorningTasks</a><span id="close" class="ui-icon ui-icon-circle-close"></span></li>
+                    <li><a href="#Afternoon">AfternoonTasks</a><span id="close" class="ui-icon ui-icon-circle-close">x</span></li>
+                    <li><a href="#evening">EveningTasks</a><span id="close" class="ui-icon ui-icon-circle-close">x</span></li>
+                </ul>
+                <ol id="morning"> 
+                    <li><input type="checkbox">Fresh Breakfast</li>
+                    <li><input type="checkbox">Goto school</li>
+                    <li><input type="checkbox">Attempts 5 classes</li>
+                    <li><input type="checkbox">Call to my friend</li>
+                </ol>
+                <ol id="Afternoon">
+                    <li><input type="checkbox">Prayer</li>
+                    <li><input type="checkbox">Lunch</li>
+                    <li><input type="checkbox">Rest</li>
+                    <li><input type="checkbox">Play with friends</li>
+                </ol>
+                <ol id="evening">
+                    <li><input type="checkbox">Prayer</li>
+                    <li><input type="checkbox">Dinner</li>
+                    <li><input type="checkbox">Stay with family</li>
+                    <li><input type="checkbox">Study books</li>
+                    <li><input type="checkbox">Go to bed</li>
+        </div>
+        <button id="btnTask">Add Task</button> 
+        <div id="taskDialog" title="Add new Task">
+            <label for="new-task">Task Title:<input type="text" id="new-task"></label>
+        </div>
+        <div id="dialog-box" title="Add a project">
+            <label for="new-project">Tab Title:<input type="text" id="new-tab"></label>
+        </div>
+      
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="toDo.js"></script>
+</body>
+
+</html>
